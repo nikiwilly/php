@@ -3,25 +3,61 @@
     <title>formulir tabel</title>
   </head>
   <body>
-    <table border="0">
-      <tr>
-        <td>Nama</td>
-        <td>:</td>
-        <td><input type="text" name="nama" value="" /></td>
-      </tr>
-      <tr>
-        <td>TTL</td>
-        <td>:</td>
-        <td><input type="date" name="ttl" value="" /></td>
-      </tr>
-      <tr>
-        <td>JENIS KELAMIN</td>
-        <td>:</td>
-        <td>
-          <input type="radio" name="jenis_kelamin" value="L" />laki-laki<br />
-          <input type="radio" name="jenis_kelamin" value="P" />perempuan
-        </td>
-      </tr>
-    </table>
+    <h1>formulir Data siswa</h1>
+    <form method="POST" action="action_formulir_tabel.php">
+      <table border="0">
+        <tr>
+          <td>Nama</td>
+          <td>:</td>
+          <td><input type="text" name="nama" value="" required /></td>
+        </tr>
+        <tr>
+          <td>TTL</td>
+          <td>:</td>
+          <td><input type="date" name="ttl" value="" required /></td>
+        </tr>
+        <tr>
+          <td>JENIS KELAMIN</td>
+          <td>:</td>
+          <td>
+            <input type="radio" name="jenis_kelamin" value="L" />laki-laki<br />
+            <input type="radio" name="jenis_kelamin" value="P" />perempuan
+          </td>
+        </tr>
+        <tr>
+          <td>Alamat</td>
+          <td>:</td>
+          <td>
+            <textarea name="alamat" rows="5" cols="20" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>Jurusan</td>
+          <td>:</td>
+          <td>
+            <select name="jurusan">
+              <option value="RPL">Rekayasa Perangkat Lunak</option>
+              <option value="TKRO">Teknik kendaraan ringan otomotif</option>
+              <option value="TAB">Teknik alat berat</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Hobi</td>
+          <td>:</td>
+          <td>
+            <input type="checkbox" name="hobi[]" value="melukis" />Melukis<br />
+            <input type="checkbox" name="hobi[]" value="membaca" />Membaca<br />
+            <input
+              type="checkbox"
+              name="hobi[]"
+              value="menangis"
+            />Menangis<br />
+          </td>
+        </tr>
+      </table>
+
+      <input type="submit" value="Simpan" />
+    </form>
   </body>
 </html>
